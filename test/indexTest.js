@@ -1,8 +1,33 @@
+
+function introduction(name){
+  return 'Hi, my name is '+ name+'.'; 
+ // return str; 
+}
+
+function introductionWithLanguage(name, language){
+str ='Hi, my name is '+ name + ' and I am learning to program in '+  language +'.';
+   // return 'Hi, my name is '+ name + ' and I am learning to program in '+  language +'.';
+   return str;
+}
+
+function introductionWithLanguageOptional(name, language){
+    if (language==null){
+      str ="Hi, my name is "+  name +" and I am learning to program in JavaScript.";
+      
+    }else{
+      str ="Hi, my name is "+  name +" and I am learning to program in " + language+ ".";
+    }
+ 
+     // return 'Hi, my name is '+ name + ' and I am learning to program in '+  language +'.';
+     return str;
+  }
+
+  
 require ( './root.js' );
 
 
 describe('introduction(name)', function() {
-  it('takes in an argument of a name and returns a phrase with that name using string interpolation', function() {
+  it('takes in an argument of a name and returns a phrase with that name using string interpolation'+introduction("estif") , function() {
     expect(introduction("Aki")).toEqual("Hi, my name is Aki.");
     expect(introduction("Samip")).toEqual("Hi, my name is Samip.");
   })
